@@ -1,7 +1,11 @@
-const TranslatePage = () => {
-  return (
-    <div>TranslatePage</div>
-  )
-}
+import { auth } from "@clerk/nextjs/server";
 
-export default TranslatePage
+const TranslatePage = () => {
+	auth().protect();
+
+	const { userId } = auth();
+
+	return <div>TranslatePage: {userId}</div>;
+};
+
+export default TranslatePage;
