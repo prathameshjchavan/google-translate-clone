@@ -1,11 +1,11 @@
 import { auth } from "@clerk/nextjs/server";
 
 const TranslatePage = () => {
-	auth().protect();
+  auth().protect();
 
-	const { userId } = auth();
+  const { userId } = auth();
 
-	return <div>TranslatePage: {userId}</div>;
+  return <div>TranslatePage: {userId}</div>;
 };
 
 export default TranslatePage;
